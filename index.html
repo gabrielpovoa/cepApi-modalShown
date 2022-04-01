@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEP - API | Home</title>
+  </head>
+  <body>
+    <div class="title-area">
+      <h2>API - Get location from CEP</h2>
+    </div>
+
+    <section class="container">
+      <form class="area-form">
+        <input
+          type="number"
+          name="cep"
+          class="box"
+          id="cep-field"
+          placeholder="Insira seu CEP"
+        />
+        <input
+          type="text"
+          name="complemento"
+          class="box"
+          id="complemento"
+          placeholder="Complemento"
+        />
+        <input
+          type="text"
+          name="bairro"
+          class="box"
+          id="logradouro"
+          placeholder="Insira seu logradouro"
+        />
+        <input
+          type="text"
+          name="localidade"
+          class="box"
+          id="localidade"
+          placeholder="Insira sua localidade"
+        />
+        <input
+          type="number"
+          name="numero"
+          class="box"
+          id="numero"
+          placeholder="Número da sua residência"
+        />
+        <input
+          type="text"
+          name="unidade-federal"
+          class="box"
+          id="unidade-federal"
+          placeholder="Qual seu Estado?"
+        />
+      </form>
+      <input type="button" value="Send Location" id="box-button" />
+    </section>
+
+    <section class="modal-click">
+        <div class="close-modal">[X]</div>
+      <div class="container-modal">
+        <div class="image-area">
+          <img
+            src="assets/image/succsses.png"
+            alt="earth globe - all green with mountains, snow, water, pines, whale, the image is circular"
+          />
+        </div>
+        <div class="info-success">
+          <p>Pronto, seu endereço foi cadastrado em nossa base de dados</p>
+          <p>
+            se quiser receber mais informações sobre nossa proposta, insceva-se
+            em nossa <strong>newsletter</strong>
+          </p>
+        </div>
+      </div>
+      <div class="newsletter-area">
+        <form class="form-newsletter">
+          <div class="area-letter">
+            <input
+              type="email"
+              class="email-area"
+              id="email-box"
+              placeholder="Insira seu E-mail"
+            />
+            <button type="submit" id="receiveLetters">Receive letters</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

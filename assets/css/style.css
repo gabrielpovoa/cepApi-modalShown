@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    transition: all .3s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-padding-top: 8rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-color: #242423;
+}
+
+section {
+    padding: 2rem 5%;
+}
+
+.title-area {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto;
+    background-color: rgb(50, 51, 56);
+    padding: 2rem 5%;
+    color: #FFF;
+}
+
+.title-area h2 {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    background-color: #454545;
+    /* display: none; */
+}
+
+.container .area-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.container .area-form .box {
+    padding: 1.4rem .8rem;
+    text-transform: none;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.container #box-button {
+    display: block;
+    margin: auto;
+    margin: top;
+    margin-top: 6rem;
+    margin-bottom: -30px;
+    padding: .7rem 1rem;
+    color: #CCC;
+    background-color: rgba(27, 27, 27, 0.788);
+    cursor: pointer;
+}
+
+.container #box-button:hover {
+    background-color: rgba(39, 10, 39, 0.534);
+}
+
+.modal-click {
+    background-color: #F3F3F3;
+    width: 80vw;
+    margin: 2rem auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding: 5rem 4%;
+    display: none;
+}
+
+.close-modal {
+    font-weight: bolder;
+    position: absolute;
+    top: 20px; left: 12px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.modal-click.active {
+    display: inline-block;
+    animation: fadeIn 0.4s cubic-bezier(.54,1.3,.63,1.34) .2s backwards;
+}
+
+.modal-click .container-modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.modal-click .container-modal .image-area {
+    max-width: 300px;
+    height: 200px;
+}
+
+.modal-click .container-modal .info-success {
+    width: 500px;
+}
+
+.modal-click .container-modal .info-success p {
+    line-height: 23px;
+    font-size: 1.8rem;
+}
+
+.modal-click .container-modal .image-area img {
+    height: 100%;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+
+.modal-click .newsletter-area .area-letter {
+    margin-right: 7.7rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+}
+
+.modal-click .newsletter-area .area-letter input {
+    background-color: rgb(50, 51, 56);
+    padding: .8rem 1rem;
+    width: 300px;
+    text-transform: none;
+    font-size: 1.3rem;
+    color: #FFF;
+}
+
+
+.modal-click .newsletter-area .area-letter button {
+    background-color: rgb(50, 51, 56);
+    padding: .8rem 2rem;
+    color: #FFF;
+    font-weight: bold;
+    margin-left: .5rem;
+}
+
+.modal-click .newsletter-area .area-letter button:hover {
+    background-color: rgb(148, 92, 148);
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .title-area h2 {
+        font-size: 1.4rem;
+    }
+
+    .container .area-form {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .modal-click {
+        margin-top: 3rem;
+    }
+
+    .modal-click .container-modal {
+        flex-direction: column;
+    }
+
+    .modal-click .newsletter-area .area-letter {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: .8rem;
+        margin-top: 2rem;
+        margin-right: 0;
+    }
+
+    .modal-click .newsletter-area .area-letter input {
+        width: 100%;
+    }
+
+    .modal-click .container-modal .info-success p {
+        font: 1.3rem;
+        line-height: 20px;
+    }
+
+    .modal-click .container-modal .info-success {
+        width: 100%;
+    }
+
+    .modal-click .newsletter-area .area-letter button {
+        margin-left: 0;
+    }
+}
+
